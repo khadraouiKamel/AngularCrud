@@ -11,7 +11,7 @@ import {MatPaginator, MatSort, MatTableDataSource, MatDialog, MatDialogRef, MatD
 export class StudentListComponent implements OnInit {
 
   
-
+  displayedColumns: string[] = ['id', 'name', 'prenom' , 'actions'];
  
   studentsData: any;
  
@@ -20,8 +20,8 @@ export class StudentListComponent implements OnInit {
   ) {
     this.studentsData = [];
   }
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   ngOnInit() {
     this.getAllStudents();

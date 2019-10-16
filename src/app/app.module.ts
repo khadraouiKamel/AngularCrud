@@ -12,7 +12,7 @@ import { StudentShowComponent } from './student-show/student-show.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatSortModule } from '@angular/material';
-
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { MatSortModule } from '@angular/material';
     FormsModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
-    MatSortModule
+    MatSortModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
