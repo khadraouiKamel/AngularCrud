@@ -3,14 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StudentCreateComponent } from './student-create/student-create.component';
+import { StudentEditComponent } from './student-edit/student-edit.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
+import { StudentShowComponent } from './student-show/student-show.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StudentCreateComponent,
+    StudentEditComponent,
+    StudentListComponent,
+    StudentShowComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
